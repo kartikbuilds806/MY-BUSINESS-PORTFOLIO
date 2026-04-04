@@ -16,7 +16,7 @@ const niches = [
     title: 'Dental Clinics',
     description: 'Appointment booking, service showcase, trust-building UI.',
     demos: [
-      { name: 'Elite Dental Care', link: 'https://elitedental-care.netlify.app' },
+      { name: 'Elite Dental Care', link: 'https://elite-dental-clinic-opal.vercel.app' },
       { name: 'The City Clinic', link: 'https://the-city-clinic-dehradun.netlify.app' },
       { name: 'V-Care Clinic', link: 'https://v-care.netlify.app' }
     ]
@@ -25,7 +25,7 @@ const niches = [
     title: 'Jewellery Shops',
     description: 'Product showcase, premium UI, catalog layout.',
     demos: [
-      { name: 'Suvanna Jeweller', link: 'https://suvanna-jeweller.vercel.app' }
+      { name: 'Suvarna Jeweller', link: 'https://suvarna-jeweller.vercel.app' }
     ]
   },
   {
@@ -39,9 +39,9 @@ const niches = [
     title: 'Salons & Makeover',
     description: 'Service pricing, booking system, image gallery.',
     demos: [
-      { name: 'Stylish Mahi Unisex', link: 'https://stylishmahi-unisex-salon.netlify.app' },
-      { name: 'Cloud 9 Salon', link: 'https://cloud9salon.netlify.app' },
-      { name: 'Ridhi Makeover', link: 'https://ridhimakeover.netlify.app' }
+      { name: 'Stylish Mahi Unisex', link: 'https://salons-website-opal.vercel.app' },
+      { name: 'Cloud 9 Salon', link: 'https://salons-demo-website.vercel.app' },
+      { name: 'Ridhi Makeover', link: 'https://ridhimakover.vercel.app' }
     ]
   },
   {
@@ -57,7 +57,7 @@ const niches = [
     title: 'Travellers / Tours',
     description: 'Tour packages, booking forms, destination showcase.',
     demos: [
-      { name: 'Smart Choice Travels', link: 'https://smartchoicetravels.netlify.app' }
+      { name: 'Smart Choice Travels', link: 'https://anubhavtravels.vercel.app' }
     ]
   }
 ];
