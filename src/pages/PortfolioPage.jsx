@@ -4,7 +4,7 @@ import { ArrowUpRight } from 'lucide-react';
 import ContactCta from '../components/ContactCta';
 
 const portfolioItems = [
-  { id: 1, title: 'Suvarna Jewellers', category: 'E-Commerce Store', result: '3x Conversions', link: 'https://suvarna-jeweller-sigma.vercel.app', image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', size: 'large' },
+  { id: 1, title: 'Suvarna Jewellers', category: 'E-Commerce Store', result: '3x Conversions', link: 'https://suvarna-jeweller.vercel.app', image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', size: 'large' },
   { id: 2, title: 'AGS Realtors', category: 'Real Estate Platform', result: '+45% Leads', link: 'https://ags-realtors.vercel.app', image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', size: 'small' },
   { id: 3, title: 'SmartChoice Travels', category: 'Travel Agency', result: 'Top Local SEO', link: 'https://anubhavtravels.vercel.app', image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', size: 'small' },
   { id: 4, title: 'Real Estate Homes', category: 'Property Listings', result: 'High SEO Rank', link: 'https://real-estate-website-ruddy-pi.vercel.app', image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', size: 'large' },
