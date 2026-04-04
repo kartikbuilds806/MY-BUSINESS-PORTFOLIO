@@ -46,7 +46,12 @@ const PortfolioPage = () => {
               }}
               className="group max-lg:!col-span-12"
             >
-              <div style={{ overflow: 'hidden', borderRadius: '24px', backgroundColor: '#f3f4f6', height: item.size === 'large' ? '600px' : '450px', position: 'relative' }}>
+              <a 
+                href={item.link}
+                target="_blank"
+                rel="noreferrer"
+                style={{ display: 'block', overflow: 'hidden', borderRadius: '24px', backgroundColor: '#f3f4f6', height: item.size === 'large' ? '600px' : '450px', position: 'relative', cursor: 'pointer' }}
+              >
                 <img 
                   src={item.image} 
                   alt={item.title} 
@@ -69,12 +74,12 @@ const PortfolioPage = () => {
                       <div style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--accent-secondary)', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Result: {item.result}</div>
                       <h3 style={{ fontSize: '2.5rem', fontFamily: 'var(--font-heading)', fontWeight: 700 }}>{item.title}</h3>
                     </div>
-                    <a href={item.link} target="_blank" rel="noreferrer" style={{ background: 'white', color: 'black', padding: '12px 24px', borderRadius: '100px', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px', transition: 'transform 0.3s' }} className="hover:-translate-y-1">
+                    <div style={{ background: 'white', color: 'black', padding: '12px 24px', borderRadius: '100px', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px', transition: 'transform 0.3s' }} className="hover:-translate-y-1">
                        Visit Live Site <ArrowUpRight size={18} />
-                    </a>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </motion.div>
           ))}
         </div>
