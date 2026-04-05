@@ -35,7 +35,7 @@ const Testimonials = () => {
   return (
     <section className="section" style={{ background: 'var(--bg-secondary)', padding: '150px 0' }}>
       <div className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.5fr)', gap: '80px', alignItems: 'center' }} className="max-lg:grid-cols-1">
+        <div className="testimonials-layout">
           
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
@@ -43,8 +43,8 @@ const Testimonials = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="section-title text-left" style={{ fontSize: '4rem', marginBottom: '1.5rem', lineHeight: 1.1 }}>Don't take our word for it.</h2>
-            <p className="section-subtitle text-left" style={{ margin: '0 0 40px 0', fontSize: '1.2rem' }}>
+            <h2 className="section-title text-left" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', marginBottom: '1.5rem', lineHeight: 1.1, textAlign: 'left' }}>Don't take our word for it.</h2>
+            <p className="section-subtitle text-left" style={{ margin: '0 0 40px 0', fontSize: '1.2rem', textAlign: 'left' }}>
               We measure our success by the bottom-line results we generate for our clients. 
             </p>
             
@@ -52,22 +52,22 @@ const Testimonials = () => {
               <button 
                 onClick={prev}
                 style={{ width: '60px', height: '60px', borderRadius: '50%', border: '1px solid var(--border-color)', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s' }}
-                className="hover:bg-accent-primary hover:text-white"
+                className="btn-outline"
               >
                 <ChevronLeft size={24} />
               </button>
               <button 
                 onClick={next}
                 style={{ width: '60px', height: '60px', borderRadius: '50%', background: 'var(--accent-primary)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s' }}
-                className="hover:bg-black hover:-translate-y-1"
+                className="btn-primary"
               >
                 <ChevronRight size={24} />
               </button>
             </div>
           </motion.div>
 
-          <div style={{ position: 'relative', height: '400px' }}>
-            <Quote size={120} color="var(--border-light)" style={{ position: 'absolute', top: '-40px', left: '-40px', zIndex: 0 }} />
+          <div style={{ position: 'relative' }}>
+            <Quote size={120} color="var(--border-light)" style={{ position: 'absolute', top: '-40px', left: '-20px', zIndex: 0 }} />
             
             <AnimatePresence mode="wait">
               <motion.div
@@ -76,22 +76,20 @@ const Testimonials = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.4 }}
-                style={{ position: 'absolute', inset: 0, zIndex: 1 }}
-                className="glass p-12 rounded-3xl"
+                style={{ position: 'relative', zIndex: 1, padding: 'clamp(24px, 5vw, 48px)', borderRadius: '24px', minHeight: '320px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
+                className="glass"
               >
-                <div style={{ display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'space-between' }}>
-                  <p style={{ fontSize: '1.5rem', lineHeight: 1.6, fontWeight: 500, color: 'var(--text-primary)', fontStyle: 'italic' }}>
-                    "{testimonials[current].text}"
-                  </p>
-                  
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', borderTop: '1px solid var(--border-color)', paddingTop: '30px', marginTop: '30px' }}>
-                    <div>
-                      <h4 style={{ fontSize: '1.2rem', fontWeight: 800, fontFamily: 'var(--font-heading)' }}>{testimonials[current].name}</h4>
-                      <p style={{ color: 'var(--text-secondary)' }}>{testimonials[current].role}</p>
-                    </div>
-                    <div style={{ background: 'var(--bg-main)', padding: '8px 16px', borderRadius: '100px', fontSize: '0.85rem', fontWeight: 700, color: 'var(--accent-secondary)' }}>
-                      {testimonials[current].result}
-                    </div>
+                <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)', lineHeight: 1.6, fontWeight: 500, color: 'var(--text-primary)', fontStyle: 'italic', marginBottom: '30px' }}>
+                  "{testimonials[current].text}"
+                </p>
+                
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: '1px solid var(--border-color)', paddingTop: '30px', flexWrap: 'wrap', gap: '15px' }}>
+                  <div>
+                    <h4 style={{ fontSize: '1.2rem', fontWeight: 800, fontFamily: 'var(--font-heading)' }}>{testimonials[current].name}</h4>
+                    <p style={{ color: 'var(--text-secondary)' }}>{testimonials[current].role}</p>
+                  </div>
+                  <div style={{ background: 'var(--bg-main)', padding: '8px 16px', borderRadius: '100px', fontSize: '0.85rem', fontWeight: 700, color: 'var(--accent-secondary)' }}>
+                    {testimonials[current].result}
                   </div>
                 </div>
               </motion.div>

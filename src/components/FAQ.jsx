@@ -42,7 +42,7 @@ const FAQ = () => {
           viewport={{ once: true }}
           style={{ textAlign: 'center', marginBottom: '60px' }}
         >
-          <h2 className="section-title" style={{ fontSize: '3.5rem', marginBottom: '1rem', letterSpacing: '-0.03em' }}>
+          <h2 className="section-title" style={{ marginBottom: '1rem', letterSpacing: '-0.03em' }}>
             Frequently Asked <span style={{ color: 'var(--accent-secondary)' }}>Questions</span>
           </h2>
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem' }}>

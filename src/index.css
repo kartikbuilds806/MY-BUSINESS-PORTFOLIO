@@ -39,6 +39,8 @@ html {
   scroll-behavior: smooth;
   font-family: var(--font-body);
   background-color: var(--bg-main);
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -47,7 +49,13 @@ body {
   line-height: 1.7;
   font-size: 17px;
   overflow-x: hidden;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -215,6 +223,7 @@ button {
   .grid-cols-3, .grid-cols-4 { grid-template-columns: repeat(2, 1fr); }
   .section-title { font-size: 2.5rem; }
   .section { padding: 80px 0; }
+  .testimonials-layout { grid-template-columns: 1fr; gap: 40px; }
 }
 
 @media (max-width: 768px) {
@@ -222,4 +231,12 @@ button {
   .section { padding: 60px 0; }
   .btn { padding: 14px 28px; }
   .section-title { font-size: 2rem; }
+  .testimonials-layout { grid-template-columns: 1fr; gap: 30px; }
+}
+
+.testimonials-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+  gap: 80px;
+  align-items: center;
 }
