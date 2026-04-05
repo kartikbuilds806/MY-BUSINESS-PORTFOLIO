@@ -20,20 +20,20 @@ const AboutPage = () => {
         </div>
         
         {/* Founder Section - Split Layout for breathing room */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '60px', alignItems: 'center', marginBottom: '100px' }} className="max-lg:grid-cols-1">
+        <div className="responsive-grid-2 weighted-left" style={{ marginBottom: '80px' }}>
           
           {/* Aesthetic visual representation */}
           <motion.div 
             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-            className="glass" style={{ height: '100%', minHeight: '500px', borderRadius: '32px', position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--accent-primary)' }}
+            className="glass" style={{ height: '100%', minHeight: 'clamp(300px, 40vw, 450px)', borderRadius: '32px', position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--accent-primary)', padding: '40px' }}
           >
              <div style={{ position: 'absolute', width: '100%', height: '100%', opacity: 0.1, backgroundImage: 'radial-gradient(circle at center, #ffffff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
              <div style={{ textAlign: 'center', zIndex: 1 }}>
-                <div style={{ width: '120px', height: '120px', borderRadius: '50%', background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', margin: '0 auto 20px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(255,255,255,0.2)' }}>
-                  <span style={{ fontSize: '3rem', color: '#fff', fontFamily: 'var(--font-heading)', fontWeight: '400' }}>K</span>
+                <div style={{ width: '100px', height: '100px', borderRadius: '50%', background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', margin: '0 auto 20px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(255,255,255,0.2)' }}>
+                  <img src="https://ui-avatars.com/api/?name=Kartik+Sharma&background=111827&color=fff&size=100" alt="Kartik Sharma" style={{ width: '100%', height: '100%', borderRadius: '50%' }} />
                 </div>
-                <h3 style={{ color: '#fff', fontSize: '2rem', marginBottom: '5px', fontWeight: '500' }}>Kartik Sharma</h3>
-                <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: '600' }}>Founder & CEO</p>
+                <h3 style={{ color: '#fff', fontSize: '1.75rem', marginBottom: '5px', fontWeight: '500' }}>Kartik Sharma</h3>
+                <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.85rem', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: '600' }}>Founder & CEO</p>
              </div>
           </motion.div>
 

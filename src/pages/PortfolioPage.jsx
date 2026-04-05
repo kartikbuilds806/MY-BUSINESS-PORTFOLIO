@@ -89,25 +89,28 @@ const PortfolioPage = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="glass"
-          style={{ padding: '60px', borderRadius: '32px', display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)', gap: '40px', alignItems: 'center', border: '1px solid var(--border-light)' }}
+          className="glass responsive-grid-2"
+          style={{ padding: 'clamp(30px, 5vw, 60px)', borderRadius: '32px', border: '1px solid var(--border-light)' }}
         >
           <div>
             <div style={{ fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--text-muted)', marginBottom: '15px' }}>
               PROVEN EXPERTISE
             </div>
-            <h3 style={{ fontSize: '2.5rem', fontFamily: 'var(--font-heading)', fontWeight: 800, marginBottom: '20px' }}>
-              Engineered for Growth.
+            <h3 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontFamily: 'var(--font-heading)', fontWeight: 800, marginBottom: '20px', lineHeight: 1.1 }}>
+              Engineered for <span style={{ color: 'var(--text-primary)' }}>Growth.</span>
             </h3>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', lineHeight: 1.6, marginBottom: '30px' }}>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1.15rem', lineHeight: 1.7, marginBottom: '30px' }}>
               With years of full-stack engineering and visual design experience, I don't rely on pre-made templates. I code custom solutions that dominate SEO, load instantly, and turn your traffic into booked revenue. 
             </p>
-            <div style={{ display: 'flex', gap: '10px', alignItems: 'center', fontWeight: 'bold' }}>
-               <img src="https://ui-avatars.com/api/?name=Kartik+Sharma&background=111827&color=fff&size=100" alt="Kartik Sharma" style={{ width: '40px', height: '40px', borderRadius: '50%' }} />
-               <span>Kartik Sharma - Director, PrimeForge</span>
+            <div style={{ display: 'flex', gap: '15px', alignItems: 'center', fontWeight: '600' }}>
+               <img src="https://ui-avatars.com/api/?name=Kartik+Sharma&background=111827&color=fff&size=100" alt="Kartik Sharma" style={{ width: '45px', height: '45px', borderRadius: '50%' }} />
+               <div>
+                 <div style={{ color: 'var(--text-primary)', fontSize: '1rem' }}>Kartik Sharma</div>
+                 <div style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>Director, PrimeForge</div>
+               </div>
             </div>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+          <div className="stats-grid">
             <div style={{ background: 'var(--bg-main)', padding: '30px', borderRadius: '16px', boxShadow: 'var(--shadow-card)' }}>
               <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-heading)', fontWeight: 800, color: 'var(--accent-secondary)' }}>50+</div>
               <div style={{ fontWeight: 600, color: 'var(--text-secondary)' }}>Projects Launched</div>

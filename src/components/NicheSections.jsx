@@ -75,7 +75,7 @@ const NicheSections = () => {
         <p className="section-subtitle">Real examples showing exactly what you'll get based on your business type.</p>
       </motion.div>
 
-      <div className="grid grid-cols-3">
+      <div className="grid grid-cols-3 carousel-mobile">
         {niches.map((niche, index) => (
           <motion.div
             key={niche.title}

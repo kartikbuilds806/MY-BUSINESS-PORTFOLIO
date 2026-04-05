@@ -223,7 +223,8 @@ button {
   .grid-cols-3, .grid-cols-4 { grid-template-columns: repeat(2, 1fr); }
   .section-title { font-size: 2.5rem; }
   .section { padding: 80px 0; }
-  .testimonials-layout { grid-template-columns: 1fr; gap: 40px; }
+  .responsive-grid-2 { grid-template-columns: 1fr; gap: 40px; }
+  .stats-grid { grid-template-columns: 1fr; gap: 20px; }
 }
 
 @media (max-width: 768px) {
@@ -231,12 +232,51 @@ button {
   .section { padding: 60px 0; }
   .btn { padding: 14px 28px; }
   .section-title { font-size: 2rem; }
-  .testimonials-layout { grid-template-columns: 1fr; gap: 30px; }
+  .responsive-grid-2 { grid-template-columns: 1fr; gap: 30px; }
+  .stats-grid { grid-template-columns: 1fr; gap: 20px; }
 }
 
-.testimonials-layout {
+.responsive-grid-2 {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
-  gap: 80px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
   align-items: center;
+}
+
+.responsive-grid-2.weighted-right {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+}
+
+.responsive-grid-2.weighted-left {
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .carousel-mobile {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 20px;
+    margin: 0 -5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .carousel-mobile > div {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+  }
+  
+  .carousel-mobile::-webkit-scrollbar {
+    display: none;
+  }
 }
