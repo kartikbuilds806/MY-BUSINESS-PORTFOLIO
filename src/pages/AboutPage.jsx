@@ -4,73 +4,71 @@ import { motion } from 'framer-motion';
 
 const AboutPage = () => {
   return (
-    <div className="page-transition min-h-screen pb-20">
-      <div className="container py-20">
+    <div className="page-transition min-h-screen" style={{ background: '#111214', color: '#ffffff' }}>
+      <div className="container py-20" style={{ maxWidth: '800px', margin: '0 auto' }}>
         
         {/* Header Section */}
-        <div style={{ textAlign: 'center', marginBottom: '80px' }}>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="section-title" style={{ fontSize: '4.5rem', marginBottom: '1.5rem' }}>
-              Crafting Digital Excellence
-            </h1>
-            <p style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto', lineHeight: 1.6 }}>
-              More than just an agency — we are your strategic growth partners in the digital space.
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+          <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', fontWeight: 800, marginBottom: '20px', fontFamily: 'var(--font-heading)' }}>
+            About <span style={{ color: '#d4af37' }}>PrimeForge</span>
+          </h1>
+          <p style={{ fontSize: '1.2rem', color: '#aaaaaa', lineHeight: 1.6, marginBottom: '60px' }}>
+            Your strategic partner in Digital Growth. We build not just websites, but high-converting assets that drive revenue.
+          </p>
+        </motion.div>
+
+        {/* Image Section */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.6, delay: 0.2 }}
+          style={{ marginBottom: '60px' }}
+        >
+          <img 
+            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+            alt="PrimeForge Office" 
+            style={{ width: '100%', height: 'auto', borderRadius: '24px', objectFit: 'cover', opacity: 0.8 }}
+          />
+        </motion.div>
+
+        {/* Mission Section */}
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>
+          <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '25px', fontFamily: 'var(--font-heading)' }}>
+            Our Mission
+          </h2>
+
+          <div style={{
+            background: '#0a0d24',
+            padding: '40px',
+            borderRadius: '16px',
+            marginBottom: '40px',
+            boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+          }}>
+            <p style={{ fontSize: '1.25rem', fontStyle: 'italic', fontWeight: '500', lineHeight: 1.6, color: '#f0f0f0' }}>
+              "Engineer digital experiences that completely dominate SEO, load instantly, and turn traffic into booked revenue."
             </p>
-          </motion.div>
-        </div>
-        
-        {/* Founder Section - Split Layout for breathing room */}
-        <div className="responsive-grid-2 weighted-left" style={{ marginBottom: '80px' }}>
-          
-          {/* Aesthetic visual representation */}
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-            className="glass" style={{ height: '100%', minHeight: 'clamp(300px, 40vw, 450px)', borderRadius: '32px', position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--accent-primary)', padding: '40px' }}
-          >
-             <div style={{ position: 'absolute', width: '100%', height: '100%', opacity: 0.1, backgroundImage: 'radial-gradient(circle at center, #ffffff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
-             <div style={{ textAlign: 'center', zIndex: 1 }}>
-                <div style={{ width: '100px', height: '100px', borderRadius: '50%', background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', margin: '0 auto 20px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(255,255,255,0.2)' }}>
-                  <img src="https://ui-avatars.com/api/?name=Kartik+Sharma&background=111827&color=fff&size=100" alt="Kartik Sharma" style={{ width: '100%', height: '100%', borderRadius: '50%' }} />
-                </div>
-                <h3 style={{ color: '#fff', fontSize: '1.75rem', marginBottom: '5px', fontWeight: '500' }}>Kartik Sharma</h3>
-                <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.85rem', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: '600' }}>Founder & CEO</p>
-             </div>
-          </motion.div>
+          </div>
 
-          {/* Clean Text Presentation */}
-          <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <div style={{ fontSize: '0.85rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.15em', color: 'var(--accent-secondary)', marginBottom: '16px' }}>
-              Our Philosophy
-            </div>
-            <h2 style={{ fontSize: '2.8rem', fontFamily: 'var(--font-heading)', fontWeight: 700, marginBottom: '30px', color: 'var(--text-primary)', lineHeight: 1.2 }}>
-              We build assets, <br/><span style={{ color: 'var(--text-secondary)', fontStyle: 'italic', fontWeight: 400 }}>not just websites.</span>
-            </h2>
-            
-            <div style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 1.8, display: 'flex', flexDirection: 'column', gap: '20px' }}>
-              <p>
-                I built PrimeForge to stop the endless cycle of generic, underperforming websites. An online presence shouldn't just exist; it needs to perform, convert, and act as your hardest-working sales asset around the clock.
-              </p>
-              <p>
-                We don't believe in templates. We believe in deeply understanding your niche, the psychology of your buyers, and engineering a digital experience that builds instant trust and undeniable authority.
-              </p>
-              
-              {/* Refined Stats */}
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '30px', borderTop: '1px solid var(--border-light)', paddingTop: '30px', marginTop: '10px' }}>
-                <div>
-                  <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-heading)', color: 'var(--text-primary)', lineHeight: 1, fontWeight: 600 }}>100%</div>
-                  <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 600, marginTop: '12px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Client Satisfaction Focus</div>
-                </div>
-                <div>
-                  <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-heading)', color: 'var(--text-primary)', lineHeight: 1, fontWeight: 600 }}>24/7</div>
-                  <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 600, marginTop: '12px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Premium Support</div>
-                </div>
+          <p style={{ fontSize: '1.1rem', color: '#aaaaaa', lineHeight: 1.8, marginBottom: '30px' }}>
+            Founded on the principles of coding excellence and complete transparency, PrimeForge has been redefining web development for service businesses. Our team works tirelessly to ensure every project stands as a testament to premium quality and conversion mastery. We don't rely on pre-made templates; everything is 100% custom-coded.
+          </p>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginTop: '40px', marginBottom: '80px' }}>
+             <div style={{ display: 'flex', gap: '5px' }}>
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d4af37" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                ))}
               </div>
-            </div>
-          </motion.div>
-        </div>
-
+              <span style={{ fontSize: '1rem', fontWeight: 600, color: '#e5e5e5' }}>5 Star Rated Agency</span>
+          </div>
+        </motion.div>
       </div>
-      <ContactCta />
+
+      <div style={{ background: 'var(--bg-main)', color: 'var(--text-primary)' }}>
+        <ContactCta />
+      </div>
     </div>
   );
 };

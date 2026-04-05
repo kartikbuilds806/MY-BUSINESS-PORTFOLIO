@@ -259,8 +259,8 @@ button {
 
 @media (max-width: 768px) {
   .carousel-mobile {
-    display: flex;
-    flex-wrap: nowrap;
+    display: flex !important;
+    flex-wrap: nowrap !important;
     overflow-x: auto;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;

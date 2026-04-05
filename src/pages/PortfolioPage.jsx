@@ -32,7 +32,7 @@ const PortfolioPage = () => {
           </p>
         </motion.div>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(12, 1fr)', gap: '40px', marginBottom: '100px' }}>
+        <div className="carousel-mobile" style={{ display: 'grid', gridTemplateColumns: 'repeat(12, 1fr)', gap: '40px', marginBottom: '100px' }}>
           {portfolioItems.map((item, index) => (
             <motion.div 
               key={item.id} 
